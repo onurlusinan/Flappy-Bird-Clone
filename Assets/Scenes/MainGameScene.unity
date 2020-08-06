@@ -264,26 +264,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1118396603}
     m_Modifications:
+    - target: {fileID: 2122290981, guid: e7bf39feb4967184f93525e5dfaa27ac, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2a9ee4893207f7348972babc8a296474, type: 2}
     - target: {fileID: 5114134882991687626, guid: e7bf39feb4967184f93525e5dfaa27ac,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2063975498}
-    - target: {fileID: 5114134882991687626, guid: e7bf39feb4967184f93525e5dfaa27ac,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Replay
-      objectReference: {fileID: 0}
-    - target: {fileID: 5114134883594074670, guid: e7bf39feb4967184f93525e5dfaa27ac,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5114134883594074671, guid: e7bf39feb4967184f93525e5dfaa27ac,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 51
-      objectReference: {fileID: 0}
     - target: {fileID: 5114134884820425859, guid: e7bf39feb4967184f93525e5dfaa27ac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -393,11 +382,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameOverCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 5114134884820425863, guid: e7bf39feb4967184f93525e5dfaa27ac,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7bf39feb4967184f93525e5dfaa27ac, type: 3}
@@ -1226,6 +1210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 941f1063d7a09df438ec0bbd35b09728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NewBestScore: 0
 --- !u!1 &1980607269
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,28 +1344,3 @@ MonoBehaviour:
       type: 3}
   GameOngoing: 0
   GamePaused: 0
---- !u!1 &2122290977 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5114134883594074670, guid: e7bf39feb4967184f93525e5dfaa27ac,
-    type: 3}
-  m_PrefabInstance: {fileID: 267562116}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &2122290981
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2122290977}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2a9ee4893207f7348972babc8a296474, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

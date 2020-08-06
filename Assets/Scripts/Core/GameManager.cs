@@ -35,7 +35,7 @@ namespace Assets.Scripts.Core
         private string ScoreStr;
 
         private bool PipesSpawned; 
-        public bool GameOngoing; // After first click
+        public bool GameOngoing; // After first click, until game is Over
         private bool isGameOver; 
         private bool GameEnded; // we do not want to repeat the gameover function forever. Game Ends after GameOver() is called once
         public bool GamePaused = false;
@@ -81,6 +81,12 @@ namespace Assets.Scripts.Core
             GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("swoosh");
 
             FindObjectOfType<BestScoreCalc>().SaveBestScore(Score); // Save Best Score if better than prev best
+
+            if (FindObjectOfType<BestScoreCalc>().NewBestScore) // New BestScore Sprite
+            {
+                GameObject.FindGameObjectWithTag("NewBest").GetComponent<Image>().enabled = true;
+            }
+                
             GiveMedal();
 
             EndScore_TMP = GameObject.FindGameObjectWithTag("EndScore").GetComponent<TextMeshProUGUI>();
@@ -123,6 +129,7 @@ namespace Assets.Scripts.Core
 
         public void Replay()
         {
+            GameObject.FindGameObjectWithTag("NewBest").GetComponent<Image>().enabled = false;
             GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("swoosh");
             SceneManager.LoadScene(1);
         }

@@ -16,6 +16,7 @@ TagManager:
   - Medal
   - PipeDestroyTrigger
   - TopTrigger
+  - NewBest
   layers:
   - Default
   - TransparentFX

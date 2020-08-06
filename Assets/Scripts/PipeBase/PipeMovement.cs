@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.Core;
+using UnityEngine;
 
 namespace Assets.Scripts.PipeBase
 {
@@ -8,7 +9,7 @@ namespace Assets.Scripts.PipeBase
 
         void Update()
         {
-            PipeSpeed = FindObjectOfType<PipeManager>().PipeSpeed; 
+            PipeSpeed = GameObject.FindGameObjectWithTag("PipeManager").GetComponent<PipeManager>().PipeSpeed; 
             transform.position += Vector3.left * Time.deltaTime * PipeSpeed;
         }
     }
