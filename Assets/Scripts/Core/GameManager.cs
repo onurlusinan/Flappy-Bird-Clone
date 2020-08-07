@@ -29,6 +29,8 @@ namespace Assets.Scripts.Core
         private TextMeshProUGUI EndScore_TMP;
         private TextMeshProUGUI BestScore_TMP;
 
+        public AudioManager AudioManager;
+
         public Medal[] Medals;
 
         private int Score;
@@ -47,6 +49,10 @@ namespace Assets.Scripts.Core
             public Sprite MedalSprite;
         }
 
+        private void Awake()
+        {
+            AudioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+        }
 
         void Start()
         {
@@ -78,7 +84,7 @@ namespace Assets.Scripts.Core
             ScoreCountCanvas.SetActive(false); // Canvases
             GameOverCanvas.SetActive(true);
 
-            GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("swoosh");
+            AudioManager.Play("swoosh");
 
             FindObjectOfType<BestScoreCalc>().SaveBestScore(Score); // Save Best Score if better than prev best
 
@@ -130,7 +136,7 @@ namespace Assets.Scripts.Core
         public void Replay()
         {
             GameObject.FindGameObjectWithTag("NewBest").GetComponent<Image>().enabled = false;
-            GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("swoosh");
+            AudioManager.Play("swoosh");
             SceneManager.LoadScene(1);
         }
 

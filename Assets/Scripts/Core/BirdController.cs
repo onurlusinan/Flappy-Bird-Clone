@@ -5,6 +5,7 @@ namespace Assets.Scripts.Core  // This script includes the controls, animations 
     public class BirdController : MonoBehaviour
     {
         private Rigidbody2D rb;
+        private GameManager GameManager; 
 
         public float velocity_Multiplier = 1; // 5 is a good value
         public float smooth = 0.1f;
@@ -14,6 +15,10 @@ namespace Assets.Scripts.Core  // This script includes the controls, animations 
         public bool GameOngoing;
         private bool isCollided; // for sfx
         private bool GamePaused;
+        private void Awake()
+        {
+            GameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        }
 
         void Start()
         {
@@ -30,7 +35,7 @@ namespace Assets.Scripts.Core  // This script includes the controls, animations 
         {
             if (collision.gameObject.CompareTag("Ground") && !isCollided) // For the ground collision
             {
-                GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("hit");
+                GameManager.AudioManager.Play("hit");
                 GameOver = true;
             }
         }
@@ -40,31 +45,31 @@ namespace Assets.Scripts.Core  // This script includes the controls, animations 
             if (collision.gameObject.CompareTag("Pipe") && !isCollided)
             {
                 Physics2D.IgnoreCollision(GetComponent<CapsuleCollider2D>(), GetComponent<Collider2D>(), true); // Fall on the ground
-                GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("hit");
-                GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("die");
+                GameManager.AudioManager.Play("hit");
+                GameManager.AudioManager.Play("die");
                 isCollided = true;
                 GameOver = true;
             }
 
             if (collision.gameObject.CompareTag("TopTrigger") && !isCollided) // The Trigger at the top
             {
-                GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("hit");
-                GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("die");
+                GameManager.AudioManager.Play("hit");
+                GameManager.AudioManager.Play("die");
                 isCollided = true;
                 GameOver = true;
             }
 
             if (collision.gameObject.CompareTag("PipeParent")) // Trigger for the score increase
             {
-                GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("point");
+                GameManager.AudioManager.Play("point");
                 Score++;
             }
         }
 
         void Update()
         {
-            GameOngoing = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().GameOngoing;
-            GamePaused = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().GamePaused;
+            GameOngoing = GameManager.GameOngoing;
+            GamePaused = GameManager.GamePaused;
 
             Physics2D.IgnoreLayerCollision(8, 10, false);
 
@@ -80,7 +85,7 @@ namespace Assets.Scripts.Core  // This script includes the controls, animations 
             
             if (Input.GetMouseButtonDown(0) && GameOngoing && !GamePaused) // jump when pressed
             {
-                GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("wing"); // Wing sfx
+                GameManager.AudioManager.Play("wing"); // Wing sfx
                 rb.velocity = Vector2.up * velocity_Multiplier; //jump
                 transform.rotation = Quaternion.Euler(0, 0, 30); 
             }

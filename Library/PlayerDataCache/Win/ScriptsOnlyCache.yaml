@@ -78,37 +78,37 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11194}
+      Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 11534}
+      Script: {instanceID: 11532}
     - Class: 114
-      Script: {instanceID: 11724}
+      Script: {instanceID: 11722}
     - Class: 114
-      Script: {instanceID: 11838}
+      Script: {instanceID: 11836}
     - Class: 114
-      Script: {instanceID: 11892}
+      Script: {instanceID: 11890}
     - Class: 114
-      Script: {instanceID: 12200}
+      Script: {instanceID: 12198}
     - Class: 114
-      Script: {instanceID: 12900}
+      Script: {instanceID: 12898}
     - Class: 114
-      Script: {instanceID: 13244}
+      Script: {instanceID: 13242}
     - Class: 114
-      Script: {instanceID: 13332}
+      Script: {instanceID: 13330}
     - Class: 114
-      Script: {instanceID: 13558}
+      Script: {instanceID: 13556}
     - Class: 114
-      Script: {instanceID: 13590}
+      Script: {instanceID: 13588}
     - Class: 114
-      Script: {instanceID: 13660}
+      Script: {instanceID: 13658}
     - Class: 114
-      Script: {instanceID: 13964}
+      Script: {instanceID: 13962}
     - Class: 114
-      Script: {instanceID: 14034}
+      Script: {instanceID: 14032}
     - Class: 114
-      Script: {instanceID: 14274}
+      Script: {instanceID: 14272}
     - Class: 114
-      Script: {instanceID: 14340}
+      Script: {instanceID: 14338}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -161,33 +161,33 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11194}
+      Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 11534}
+      Script: {instanceID: 11532}
     - Class: 114
-      Script: {instanceID: 11892}
+      Script: {instanceID: 11890}
     - Class: 114
-      Script: {instanceID: 11994}
+      Script: {instanceID: 11992}
     - Class: 114
-      Script: {instanceID: 12200}
+      Script: {instanceID: 12198}
     - Class: 114
-      Script: {instanceID: 12252}
+      Script: {instanceID: 12250}
     - Class: 114
-      Script: {instanceID: 12900}
+      Script: {instanceID: 12898}
     - Class: 114
-      Script: {instanceID: 13244}
+      Script: {instanceID: 13242}
     - Class: 114
-      Script: {instanceID: 13262}
+      Script: {instanceID: 13260}
     - Class: 114
-      Script: {instanceID: 13558}
+      Script: {instanceID: 13556}
     - Class: 114
-      Script: {instanceID: 13590}
+      Script: {instanceID: 13588}
     - Class: 114
-      Script: {instanceID: 13660}
+      Script: {instanceID: 13658}
     - Class: 114
-      Script: {instanceID: 13934}
+      Script: {instanceID: 13932}
     - Class: 114
-      Script: {instanceID: 14274}
+      Script: {instanceID: 14272}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -353,7 +353,7 @@ ScriptsOnlyBuild:
     className: SpriteLibrary
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: c8e3a16656540c16aab2d1fbb8260ec3
     assemblyName: Assembly-CSharp.dll
     namespaceName: Assets.Scripts.Utilities
     className: BestScoreCalc
@@ -563,7 +563,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 6887229932861c01af751a2b8bb45a0c
+      Hash: e0e2f80d16af2f94f209fd355cf52675
     assemblyName: Assembly-CSharp.dll
     namespaceName: Assets.Scripts.Core
     className: BirdController
@@ -713,7 +713,7 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
-      Hash: 8f496b704f09134b983472499f096ff3
+      Hash: 8c02cdd593814cfe60a1f1a68d818b75
     assemblyName: Assembly-CSharp.dll
     namespaceName: Assets.Scripts.Core
     className: GameManager
@@ -733,4 +733,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/TitleScene.unity
   - Assets/Scenes/MainGameScene.unity
-  playerPath: C:/Users/Onur/Desktop/FlappyBird_Build/Flappy Bird Clone.exe
+  playerPath: C:/Users/Onur/Desktop/Flappy Bird Clone by OST/Flappy Bird Clone.exe
