@@ -4,25 +4,23 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-using Flappy.Gameplay;
+using Flappy.Audio;
 
 namespace Assets.Flappy.Utilities
 { 
     public class StartMainScene : MonoBehaviour // This script is for the Title Scene
     {
         private Button StartButton;
-        private GameObject AudioManager;
 
         private void Start()
         {
             StartButton = gameObject.GetComponent<Button>();
             StartButton.onClick.AddListener(StartGame);
-            AudioManager = GameObject.FindGameObjectWithTag("AudioManager");
         }
 
         public void StartGame() 
         {
-            AudioManager.GetComponent<AudioManager>().Play("swoosh");
+            SoundManager.Instance.Play(Sounds.swoosh);
             SceneManager.LoadScene(1);
         }
     }
