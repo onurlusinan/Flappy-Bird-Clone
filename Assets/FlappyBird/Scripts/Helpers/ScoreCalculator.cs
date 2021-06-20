@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace Flappy.Helpers
 {
-    public class BestScoreCalc : MonoBehaviour
+    public class ScoreCalculator : MonoBehaviour
     {
         // Saves BestScore in PlayerPrefs, then we fetch it in GameManager.cs
         public bool NewBestScore = false; // For the NewBest Sprite

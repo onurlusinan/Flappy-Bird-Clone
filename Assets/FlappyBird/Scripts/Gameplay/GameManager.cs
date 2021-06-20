@@ -79,9 +79,9 @@ namespace Flappy.Gameplay
 
             SoundManager.Instance.Play(Sounds.swoosh);
 
-            FindObjectOfType<BestScoreCalc>().SaveBestScore(Score); // Save Best Score if better than prev best
+            FindObjectOfType<ScoreCalculator>().SaveBestScore(Score); // Save Best Score if better than prev best
 
-            if (FindObjectOfType<BestScoreCalc>().NewBestScore) // New BestScore Sprite
+            if (FindObjectOfType<ScoreCalculator>().NewBestScore) // New BestScore Sprite
             {
                 GameObject.FindGameObjectWithTag("NewBest").GetComponent<Image>().enabled = true;
             }

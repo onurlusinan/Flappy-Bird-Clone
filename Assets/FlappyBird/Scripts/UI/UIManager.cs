@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 using DG.Tweening;
+using Flappy.Audio;
+using Flappy.Helpers;
 
 namespace Flappy.UI
 { 
@@ -12,10 +15,16 @@ namespace Flappy.UI
         public Transform mainTitle;
         public Image fadeOverlay;
 
+        private Scene currentScene;
+
         private void Start()
         {
+            currentScene = SceneManager.GetActiveScene();
+
             FadeOverlay();
-            PlayTitle();
+        
+            if(currentScene.buildIndex == 0) 
+                PlayTitle();
         }
 
         public void FadeOverlay()
@@ -29,6 +38,12 @@ namespace Flappy.UI
             titleLoop.Append(mainTitle.DOLocalMoveY(580f, 0.2f))
                      .Append(mainTitle.DOLocalMoveY(600f, 0.2f))
                      .SetLoops(-1);
+        }
+
+        public void StartGame()
+        {
+            SoundManager.Instance.Play(Sounds.swoosh);
+            SceneManager.LoadScene(1);
         }
     }
 }
