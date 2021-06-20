@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-using Flappy.Core;
+using Flappy.Gameplay;
 
 namespace Assets.Flappy.Utilities
 { 

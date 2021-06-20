@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
-
-using Flappy.Pipes;
 using UnityEngine.UI;
 using System;
 
+using Flappy.Pipes;
 using Flappy.Helpers;
+using Flappy.Audio;
 
-namespace Flappy.Core
+namespace Flappy.Gameplay
 {
     public class GameManager : MonoBehaviour
     {
@@ -29,8 +29,6 @@ namespace Flappy.Core
         private TextMeshProUGUI EndScore_TMP;
         private TextMeshProUGUI BestScore_TMP;
 
-        public AudioManager AudioManager;
-
         public Medal[] Medals;
 
         private int Score;
@@ -47,11 +45,6 @@ namespace Flappy.Core
         {
             public string MedalName;
             public Sprite MedalSprite;
-        }
-
-        private void Awake()
-        {
-            AudioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         }
 
         void Start()
@@ -84,7 +77,7 @@ namespace Flappy.Core
             ScoreCountCanvas.SetActive(false); // Canvases
             GameOverCanvas.SetActive(true);
 
-            AudioManager.Play("swoosh");
+            SoundManager.Instance.Play(Sounds.swoosh);
 
             FindObjectOfType<BestScoreCalc>().SaveBestScore(Score); // Save Best Score if better than prev best
 
@@ -136,7 +129,7 @@ namespace Flappy.Core
         public void Replay()
         {
             GameObject.FindGameObjectWithTag("NewBest").GetComponent<Image>().enabled = false;
-            AudioManager.Play("swoosh");
+            SoundManager.Instance.Play(Sounds.swoosh);
             SceneManager.LoadScene(1);
         }
 

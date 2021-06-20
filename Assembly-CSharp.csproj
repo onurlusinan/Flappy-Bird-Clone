@@ -58,20 +58,23 @@
   <ItemGroup>
     <Compile Include="Assets\FlappyBird\Scripts\Pipes\PipeManager.cs" />
     <Compile Include="Assets\FlappyBird\Scripts\Helpers\BestScoreCalc.cs" />
-    <Compile Include="Assets\FlappyBird\Scripts\Core\GameManager.cs" />
+    <Compile Include="Assets\FlappyBird\Scripts\Gameplay\GameManager.cs" />
     <Compile Include="Assets\FlappyBird\Scripts\Pipes\PipeDestroyer.cs" />
     <Compile Include="Assets\FlappyBird\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
     <Compile Include="Assets\FlappyBird\Scripts\Helpers\StartMainScene.cs" />
     <Compile Include="Assets\FlappyBird\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
     <Compile Include="Assets\FlappyBird\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\FlappyBird\Plugins\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
-    <Compile Include="Assets\FlappyBird\Scripts\Core\AudioManager.cs" />
+    <Compile Include="Assets\FlappyBird\Scripts\Audio\SoundManager.cs" />
     <Compile Include="Assets\FlappyBird\Scripts\Pipes\PipeMovement.cs" />
     <Compile Include="Assets\FlappyBird\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
     <Compile Include="Assets\FlappyBird\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\FlappyBird\Scripts\Helpers\Sound.cs" />
     <Compile Include="Assets\FlappyBird\Plugins\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
-    <Compile Include="Assets\FlappyBird\Scripts\Core\BirdController.cs" />
+    <Compile Include="Assets\FlappyBird\Scripts\Gameplay\BirdController.cs" />
+    <Compile Include="Assets\FlappyBird\Scripts\Audio\Sounds.cs" />
+    <Compile Include="Assets\FlappyBird\Scripts\Audio\ScriptableObjects\AudioDataCollection.cs" />
+    <Compile Include="Assets\FlappyBird\Scripts\Audio\ScriptableObjects\AudioData.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
@@ -316,9 +319,6 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>G:\UnityEditors\2020.3.4f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
-    </Reference>
-    <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>Library\ScriptAssemblies\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
       <HintPath>Assets\FlappyBird\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>

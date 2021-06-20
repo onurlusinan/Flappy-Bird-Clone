@@ -1,4 +1,4 @@
-﻿using Flappy.Core;
+﻿using Flappy.Gameplay;
 using UnityEngine;
 
 namespace Flappy.Pipes

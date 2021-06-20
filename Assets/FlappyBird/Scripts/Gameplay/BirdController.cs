@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 
-namespace Flappy.Core  // This script includes the controls, animations and sfx of flappy bird 
+using Flappy.Audio;
+
+namespace Flappy.Gameplay  // This script includes the controls, animations and sfx of flappy bird 
 {
     public class BirdController : MonoBehaviour
     {
@@ -35,7 +37,7 @@ namespace Flappy.Core  // This script includes the controls, animations and sfx 
         {
             if (collision.gameObject.CompareTag("Ground") && !isCollided) // For the ground collision
             {
-                GameManager.AudioManager.Play("hit");
+                SoundManager.Instance.Play(Sounds.hit);
                 GameOver = true;
             }
         }
@@ -45,23 +47,23 @@ namespace Flappy.Core  // This script includes the controls, animations and sfx 
             if (collision.gameObject.CompareTag("Pipe") && !isCollided)
             {
                 Physics2D.IgnoreCollision(GetComponent<CapsuleCollider2D>(), GetComponent<Collider2D>(), true); // Fall on the ground
-                GameManager.AudioManager.Play("hit");
-                GameManager.AudioManager.Play("die");
+                SoundManager.Instance.Play(Sounds.hit);
+                SoundManager.Instance.Play(Sounds.die);
                 isCollided = true;
                 GameOver = true;
             }
 
             if (collision.gameObject.CompareTag("TopTrigger") && !isCollided) // The Trigger at the top
             {
-                GameManager.AudioManager.Play("hit");
-                GameManager.AudioManager.Play("die");
+                SoundManager.Instance.Play(Sounds.hit);
+                SoundManager.Instance.Play(Sounds.die);
                 isCollided = true;
                 GameOver = true;
             }
 
             if (collision.gameObject.CompareTag("PipeParent")) // Trigger for the score increase
             {
-                GameManager.AudioManager.Play("point");
+                SoundManager.Instance.Play(Sounds.point);
                 Score++;
             }
         }
@@ -88,7 +90,7 @@ namespace Flappy.Core  // This script includes the controls, animations and sfx 
                 rb.velocity = Vector2.up * velocity_Multiplier; //jump
                 transform.rotation = Quaternion.Euler(0, 0, 30);
 
-                GameManager.AudioManager.Play("wing"); // Wing sfx
+                SoundManager.Instance.Play(Sounds.wing); // Wing sfx
             }
 
             if (isCollided)

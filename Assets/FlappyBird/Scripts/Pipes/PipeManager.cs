@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-using Flappy.Core;
+using Flappy.Gameplay;
 
 namespace Flappy.Pipes
 {

@@ -171,15 +171,16 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1512805099}
   m_Father: {fileID: 5335172169997951129}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: 250}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 60, y: 164}
   m_SizeDelta: {x: 944.447, y: 187.704}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &52787839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,13 +418,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5335172169997951129}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -808.482}
-  m_SizeDelta: {x: 944.447, y: 187.704}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 65, y: 98}
+  m_SizeDelta: {x: 944.447, y: 187.70398}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &392250592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -599,7 +600,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 66.700005, y: 0.40000916}
+  m_AnchoredPosition: {x: 66.700005, y: 0.4000244}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1273568911
@@ -614,7 +615,7 @@ GameObject:
   - component: {fileID: 1273568908}
   - component: {fileID: 1273568909}
   m_Layer: 5
-  m_Name: Bird_Sprite
+  m_Name: Bird
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -631,7 +632,7 @@ GameObject:
   - component: {fileID: 1360082200}
   - component: {fileID: 1360082199}
   m_Layer: 0
-  m_Name: AudioManager
+  m_Name: SoundManager
   m_TagString: AudioManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -649,32 +650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 846d380c6beac844a9f553488e44ced7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sounds:
-  - name: wing
-    Clip: {fileID: 8300000, guid: a5cde39052a66114eb3d43bd51028026, type: 3}
-    Volume: 0.7
-    Pitch: 1
-    Source: {fileID: 0}
-  - name: point
-    Clip: {fileID: 8300000, guid: 688681839089a82419a79f1d737894e2, type: 3}
-    Volume: 0.7
-    Pitch: 1
-    Source: {fileID: 0}
-  - name: hit
-    Clip: {fileID: 8300000, guid: 2f5f542810f316444a13eda1f7af451b, type: 3}
-    Volume: 0.7
-    Pitch: 1
-    Source: {fileID: 0}
-  - name: die
-    Clip: {fileID: 8300000, guid: 86d7810773314894fb1dbc5e0ec919f7, type: 3}
-    Volume: 0.7
-    Pitch: 1
-    Source: {fileID: 0}
-  - name: swoosh
-    Clip: {fileID: 8300000, guid: 11954d8f44264c745a6f95f177141402, type: 3}
-    Volume: 1
-    Pitch: 1
-    Source: {fileID: 0}
+  Sounds: []
 --- !u!4 &1360082200
 Transform:
   m_ObjectHideFlags: 0
@@ -727,16 +703,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1512805098}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5335172169997951129}
-  m_RootOrder: 4
+  m_Father: {fileID: 52787838}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 128}
+  m_AnchoredPosition: {x: 5, y: -122.000015}
   m_SizeDelta: {x: 944.447, y: 187.704}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1512805100
@@ -829,7 +805,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5335172169997951129}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1170,13 +1146,13 @@ RectTransform:
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 5335172169997951129}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -422}
-  m_SizeDelta: {x: 55.024, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 372, y: -435}
+  m_SizeDelta: {x: 55.023987, y: 30}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &5335172168903547033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1324,12 +1300,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 5335172170459706190}
-  - {fileID: 5335172168903547032}
   - {fileID: 1615015813}
-  - {fileID: 392250591}
-  - {fileID: 1512805099}
+  - {fileID: 5335172170459706190}
   - {fileID: 52787838}
+  - {fileID: 5335172168903547032}
+  - {fileID: 392250591}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1437,13 +1412,13 @@ RectTransform:
   m_Children:
   - {fileID: 1273568910}
   m_Father: {fileID: 5335172169997951129}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -83, y: 613}
-  m_SizeDelta: {x: 100, y: 31.537}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -54, y: -226}
+  m_SizeDelta: {x: 100, y: 31.536987}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &5335172170459706191
 MonoBehaviour:
   m_ObjectHideFlags: 0
