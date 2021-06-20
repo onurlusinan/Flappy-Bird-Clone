@@ -42,8 +42,6 @@ namespace Flappy.Audio
 
             timer = 0;
             paused = false;
-
-            Play(Sounds.swoosh, true); // for testing
         }
 
         /// <summary>
