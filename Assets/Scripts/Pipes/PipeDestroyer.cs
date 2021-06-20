@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assets.Scripts.PipeBase
+namespace Flappy.Pipes
 {
     public class PipeDestroyer : MonoBehaviour
     {

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace Assets.Scripts.Utilities
+namespace Flappy.Helpers
 {
     public class BestScoreCalc : MonoBehaviour
     {

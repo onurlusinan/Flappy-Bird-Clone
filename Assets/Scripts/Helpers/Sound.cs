@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assets.Scripts.Utilities
+namespace Flappy.Helpers
 {
     [System.Serializable]
     public class Sound

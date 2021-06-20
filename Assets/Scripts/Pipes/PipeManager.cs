@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-using Assets.Scripts.Core;
+using Flappy.Core;
 
-namespace Assets.Scripts.PipeBase
+namespace Flappy.Pipes
 {
     public class PipeManager : MonoBehaviour
     {

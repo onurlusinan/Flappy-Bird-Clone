@@ -1,2 +1,5 @@
 
-Temp/UnityLockfile
+Temp/
+Library/
+Logs/
+obj/

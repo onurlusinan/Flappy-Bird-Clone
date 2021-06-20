@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-using Assets.Scripts.Core;
+using Flappy.Core;
 
-namespace Assets.Scripts.Utilities
+namespace Assets.Flappy.Utilities
 { 
     public class StartMainScene : MonoBehaviour // This script is for the Title Scene
     {

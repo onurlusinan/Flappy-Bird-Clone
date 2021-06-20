@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System;
 
-using Assets.Scripts.Utilities;
+using Flappy.Helpers;
 
-namespace Assets.Scripts.Core
+namespace Flappy.Core
 {
     public class AudioManager : MonoBehaviour
     {

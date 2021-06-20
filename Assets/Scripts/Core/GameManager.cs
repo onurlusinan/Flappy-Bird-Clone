@@ -2,13 +2,13 @@
 using TMPro;
 using UnityEngine.SceneManagement;
 
-using Assets.Scripts.PipeBase;
+using Flappy.Pipes;
 using UnityEngine.UI;
 using System;
 
-using Assets.Scripts.Utilities;
+using Flappy.Helpers;
 
-namespace Assets.Scripts.Core
+namespace Flappy.Core
 {
     public class GameManager : MonoBehaviour
     {

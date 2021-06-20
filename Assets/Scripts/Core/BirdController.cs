@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assets.Scripts.Core  // This script includes the controls, animations and sfx of flappy bird 
+namespace Flappy.Core  // This script includes the controls, animations and sfx of flappy bird 
 {
     public class BirdController : MonoBehaviour
     {

@@ -56,14 +56,14 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\PipeBase\PipeManager.cs" />
-    <Compile Include="Assets\Scripts\Utilities\BestScoreCalc.cs" />
+    <Compile Include="Assets\Scripts\Pipes\PipeManager.cs" />
+    <Compile Include="Assets\Scripts\Helpers\BestScoreCalc.cs" />
     <Compile Include="Assets\Scripts\Core\GameManager.cs" />
-    <Compile Include="Assets\Scripts\PipeBase\PipeDestroyer.cs" />
-    <Compile Include="Assets\Scripts\Utilities\StartMainScene.cs" />
+    <Compile Include="Assets\Scripts\Pipes\PipeDestroyer.cs" />
+    <Compile Include="Assets\Scripts\Helpers\StartMainScene.cs" />
     <Compile Include="Assets\Scripts\Core\AudioManager.cs" />
-    <Compile Include="Assets\Scripts\PipeBase\PipeMovement.cs" />
-    <Compile Include="Assets\Scripts\Utilities\Sound.cs" />
+    <Compile Include="Assets\Scripts\Pipes\PipeMovement.cs" />
+    <Compile Include="Assets\Scripts\Helpers\Sound.cs" />
     <Compile Include="Assets\Scripts\Core\BirdController.cs" />
   </ItemGroup>
   <ItemGroup>
