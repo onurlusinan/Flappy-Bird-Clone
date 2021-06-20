@@ -28,6 +28,8 @@ namespace Flappy.Audio
             else
                 Destroy(this.gameObject);
 
+            DontDestroyOnLoad(this.gameObject);
+
             #region Events
             #endregion
 
