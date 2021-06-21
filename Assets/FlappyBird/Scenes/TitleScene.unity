@@ -1298,6 +1298,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainTitle: {fileID: 1603913517}
   fadeOverlay: {fileID: 1615015815}
+  background: {fileID: 605531219}
+  backgroundMovementDuration: 5
+  ground: {fileID: 10771983}
+  groundMovementDuration: 3
+  ease: 1
 --- !u!224 &5335172168903547032
 RectTransform:
   m_ObjectHideFlags: 0
