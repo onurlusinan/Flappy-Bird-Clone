@@ -45,7 +45,7 @@ namespace Flappy.UI
 
         public void FadeOverlay()
         {
-            fadeOverlay.DOFade(0, 0.5f);
+            fadeOverlay.DOFade(0, 1f).SetDelay(0.3f).OnComplete(()=> fadeOverlay.gameObject.SetActive(false));
         }
 
         public void PlayTitle()
