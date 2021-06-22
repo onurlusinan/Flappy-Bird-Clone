@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 namespace Flappy.Helpers
 {
-    public class ScoreCalculator : MonoBehaviour
+    public class BestScore : MonoBehaviour
     {
         // Saves BestScore in PlayerPrefs, then we fetch it in GameManager.cs
         public bool NewBestScore = false; // For the NewBest Sprite
