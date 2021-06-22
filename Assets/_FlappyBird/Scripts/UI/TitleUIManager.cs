@@ -21,8 +21,6 @@ namespace Flappy.UI
         public Image fadeOverlay;
 
         [Header("Background")]
-        public Transform background;
-        public float backgroundMovementDuration = 5f;
         public Transform ground;
         public float groundMovementDuration = 3f;
         public Ease ease;
@@ -39,7 +37,6 @@ namespace Flappy.UI
 
             // Start playing tweens
             PlayTitle();
-            PlayBackground();
             PlayGround();
         }
 
@@ -54,13 +51,6 @@ namespace Flappy.UI
             titleLoop.Append(mainTitle.DOLocalMoveY(580f, 0.3f))
                      .Append(mainTitle.DOLocalMoveY(590f, 0.3f))
                      .SetLoops(-1);
-        }
-
-        public void PlayBackground()
-        {
-            background.DOLocalMoveX(-540f, backgroundMovementDuration)
-                      .SetEase(ease)
-                      .SetLoops(-1);
         }
 
         public void PlayGround()
