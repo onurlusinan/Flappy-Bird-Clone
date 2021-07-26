@@ -9,7 +9,7 @@ namespace Flappy.Pipes
 
         void Update()
         {
-            PipeSpeed = GameObject.FindGameObjectWithTag("PipeManager").GetComponent<PipeManager>().PipeSpeed; 
+            PipeSpeed = GameObject.FindGameObjectWithTag("PipeManager").GetComponent<PipeManager>().pipeSpeed; 
             transform.position += Vector3.left * Time.deltaTime * PipeSpeed;
         }
     }
