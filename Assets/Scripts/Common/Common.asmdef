@@ -1,0 +1,19 @@
+{
+    "name": "Common",
+    "rootNamespace": "Common",
+    "references": [
+        "UniTask",
+        "LitMotion",
+        "LitMotion.Extensions",
+        "UnityEngine.UI"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
