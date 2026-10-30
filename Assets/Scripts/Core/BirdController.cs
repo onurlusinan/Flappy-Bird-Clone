@@ -85,7 +85,7 @@ namespace Assets.Scripts.Core  // This script includes the controls, animations 
             
             if (Input.GetMouseButtonDown(0) && GameOngoing && !GamePaused) // jump when pressed
             {
-                rb.velocity = Vector2.up * velocity_Multiplier; //jump
+                rb.linearVelocity = Vector2.up * velocity_Multiplier; //jump
                 transform.rotation = Quaternion.Euler(0, 0, 30);
 
                 GameManager.AudioManager.Play("wing"); // Wing sfx
