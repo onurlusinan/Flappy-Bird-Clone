@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f54211e3f7b64e41bd543cbecd2bffd, type: 3}
+  m_Name: MedalTable
+  m_EditorClassIdentifier: Assembly-CSharp::Game.UI.MedalTable
+  tiers:
+  - minScore: 10
+    sprite: {fileID: 6739268201273843614, guid: bbbf81b525f268a4c9262d17e800c243,
+      type: 3}
+  - minScore: 20
+    sprite: {fileID: -4201885668422426124, guid: bbbf81b525f268a4c9262d17e800c243,
+      type: 3}
+  - minScore: 30
+    sprite: {fileID: 1399865248621217857, guid: bbbf81b525f268a4c9262d17e800c243,
+      type: 3}
+  - minScore: 40
+    sprite: {fileID: 2037097137259322841, guid: bbbf81b525f268a4c9262d17e800c243,
+      type: 3}

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 289ee911893b541eb847b17b0bcea25b, type: 3}
+  m_Name: PauseDarkinatorConfig
+  m_EditorClassIdentifier: Common::Common.Configs.DarkinatorConfig
+  alpha: 0.5
+  enterAnimated: 1
+  exitAnimated: 1
+  enterDuration: 0.2
+  exitDuration: 0.15
+  enterEase: 5
+  exitEase: 4
