@@ -5,7 +5,7 @@ description: How to work on this Unity 6 project safely - project layout, code c
 
 # Unity development in this project
 
-The project is Unity **6000.5.6f1**, 2D, built-in render pipeline, uGUI + TextMesh Pro, Input System only. There is no CLI build; the only ways to know a change works are compiling and running Unity (batchmode or the user pressing Play).
+The project is Unity **6000.5.6f1**, 2D, **URP with the 2D Renderer**, uGUI + TextMesh Pro, Input System only. There is no CLI build; the only ways to know a change works are compiling and running Unity (batchmode or the user pressing Play).
 
 ## Project map
 
@@ -17,7 +17,7 @@ The project is Unity **6000.5.6f1**, 2D, built-in render pipeline, uGUI + TextMe
 | `Assets/Scripts/Game/` | Game scene: `GameSceneContext(Controller)`, `GameFlow` state machine, `Bird/`, `Pipes/`, `UI/` (HUD + popups) |
 | `Assets/Scripts/Audio/`, `Progress/`, `Title/` | AudioPlayer + SoundId, BestScoreRecord (save participant), title screen |
 | `Assets/Scripts/Editor/PlayModeBootstrap.cs` | Play always starts from `Starter.unity` so the app context exists |
-| `Assets/Settings/` | ScriptableObject configs: PopupCatalog, PopupServiceConfig, DarkinatorConfig, MedalTable |
+| `Assets/Settings/` | ScriptableObject configs: PopupCatalog, PopupServiceConfig, DarkinatorConfig, MedalTable; `Rendering/` holds the URP asset, 2D renderer, global settings and default volume profile |
 | `Assets/Prefabs/Popups/` | Popup prefabs (root = overlay Canvas + `TypedPopup<TData>`), Darkinator |
 
 Boot flow: `Starter` (App object, DontDestroyOnLoad: context controller, AudioPlayer, SceneTransition, the only EventSystem) → `Title` → `Game`. Scene controllers reach app services through `ApplicationContextController.Current`.
@@ -65,6 +65,8 @@ Test runs write a real save file to `~/Library/Application Support/OnurSinanTogr
 ## Known gotchas
 
 - **TextMesh Pro resources** live in the current layout: all shaders and `.cginc` files together in `Assets/TextMesh Pro/Shaders/`. A shader complaining it can't open `TMPro_Properties.cginc` means the folders got split again.
+- **Rendering is URP 2D.** Sprites use `Sprite-Unlit-Default` (the game has no 2D lights, and unlit draws sprites exactly as authored); switch to `Sprite-Lit-Default` only together with adding `Light2D`s. New cameras need `UniversalAdditionalCameraData` (`camera.GetUniversalAdditionalCameraData()` adds it). Never assign the built-in `Sprites-Default` material.
+- In batchmode play-throughs the editor's own search indexer (`UnityEditor.Search.SearchInit`) can log an `ArgumentOutOfRangeException` on startup. It's editor-internal, not the game: filter errors whose stack contains `UnityEditor.Search.` rather than failing on them.
 - `SceneId` values must equal build indices; update both together.
 - HUD canvases have no `GraphicRaycaster` on purpose - `GameInput` ignores taps over raycastable UI, so a full-screen raycast target would swallow every flap.
 - Popups are destroyed on scene unload and fire `OnClosed` then; anything in `OnClosed` must be safe during teardown.

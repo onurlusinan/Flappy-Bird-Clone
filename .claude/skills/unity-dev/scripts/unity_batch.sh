@@ -32,5 +32,5 @@ code=$?
 
 echo "exit=$code log=$log"
 grep -E "error CS|warning CS" "$log" | sort -u
-grep -E "[A-Za-z]+Exception: |Scripts have compiler errors|\] Failed" "$log" | sort -u | head -20
+grep -E "[A-Za-z]+Exception: |Scripts have compiler errors|\] Failed: " "$log" | sort -u | head -20
 exit $code
